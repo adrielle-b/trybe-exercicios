@@ -1,13 +1,13 @@
 //Exercicio 1
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-for (i = 0; i < numbers.length; i += 1) {
+for (let i = 0; i < numbers.length; i += 1) {
     console.log (numbers[i])
 }
 
 //Exercicio 2
 let soma= 0;
-for (i = 0; i < numbers.length; i += 1) {
+for (let i = 0; i < numbers.length; i += 1) {
     soma += numbers[i]
 }
     console.log (soma)
@@ -15,7 +15,7 @@ for (i = 0; i < numbers.length; i += 1) {
 //Exercicio 3
 let somaDaMedia = 0;
 let media = 0;
-for (i = 0; i < numbers.length; i += 1){
+for (let i = 0; i < numbers.length; i += 1){
     somaDaMedia += numbers[i]
 }
 media = somaDaMedia/numbers.length;
@@ -31,7 +31,7 @@ else {
 
 //Exercicio 5
 let maior= numbers[0];
-for (i = 0; i < numbers.length; i += 1){
+for (let i = 0; i < numbers.length; i += 1){
     if (numbers[i] > maior ){
         maior = numbers[i]
     }
@@ -41,7 +41,7 @@ for (i = 0; i < numbers.length; i += 1){
 //Exercicio 6
 let numerosImpares= []
 
-for (i = 0; i < numbers.length; i += 1){
+for (let i = 0; i < numbers.length; i += 1){
     if(numbers[i]%2 !== 0){
         numerosImpares.push(numbers[i])
     }
@@ -56,7 +56,7 @@ for (i = 0; i < numbers.length; i += 1){
 //Exercicio 7
 let menorValor= numbers[0];
 
-for(i = 0; i < numbers.length; i += 1){
+for(let i = 0; i < numbers.length; i += 1){
     if(numbers[i] < menorValor){
         menorValor= numbers[i]
     }
@@ -64,15 +64,15 @@ for(i = 0; i < numbers.length; i += 1){
     console.log(menorValor)
 
 //Exercicio 8
-let array = [];
+let num = [];
 
-for(i = 1; i <= 25; i += 1){
-    array.push (i)
+for(let i = 1; i <= 25; i += 1){
+    num.push (i)
 }
-    console.log(array)
+    console.log(num)
 
 //Exercicio 9
 
-for(i= 0; i < array.length; i += 1){
-    console.log(array[i] / 2)
+for(let i= 0; i < numbers.length; i += 1){
+    console.log(numbers[i] / 2)
 }

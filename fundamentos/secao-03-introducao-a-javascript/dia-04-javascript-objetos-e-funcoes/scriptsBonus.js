@@ -15,3 +15,4 @@ function arrayOfNumbers (vector){
 }
 console.log (arrayOfNumbers(vector));
 
+

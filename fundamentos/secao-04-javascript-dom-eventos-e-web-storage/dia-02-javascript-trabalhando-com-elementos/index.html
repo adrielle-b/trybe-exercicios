@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+     //1
+     const body = document.querySelector('body')
+     const titulo = document.createElement('h1');
+     titulo.className = 'title';
+     body.appendChild(titulo);
+     titulo.innerText = 'TrybeTrip - Agência de Viagens ';
+
+     //2
+     const main = document.createElement('main');
+     main.className = 'main-content';
+     body.appendChild(main);
+
+     //3
+     const mainPai = document.querySelector('main');
+     const section = document.createElement('section');
+     section.className = 'center-content';
+     mainPai.appendChild(section);
+
+     //4
+     const sectionPai = document.querySelector('section');
+     const paragrafo = document.createElement('p');
+     sectionPai.appendChild(paragrafo);
+     paragrafo.innerText = 'O Rio de Janeiro é uma grande cidade brasileira à beira-mar, famosa pelas praias de Copacabana e Ipanema, pela estátua de 38 metros de altura do Cristo Redentor, no topo do Corcovado, e pelo Pão de Açúcar, um pico de granito com teleféricos até seu cume.';
+
+     //5
+     const section2 = document.createElement('section');
+     section2.className = 'left-content';
+     mainPai.appendChild(section2);
+
+     //6
+     const section3 = document.createElement('section');
+     section3.className = 'right-content';
+     mainPai.appendChild(section3);
+
+     //7
+     const sectionLeft = document.querySelector('.left-content');
+     const imagem = document.createElement('img');
+     imagem.src = 'https://picsum.photos/200';
+     imagem.className = 'small-imagem';
+     sectionLeft.appendChild(imagem);
+
+     //8
+     const sectionRigth = document.querySelector('.right-content');
+     const lista = document.createElement('ul');
+     for(let i=1; i <= 10; i += 1){
+        const item = document.createElement('li');
+        item.innerText = i + (i === 1 ? ' um': i === 2 ? ' dois' : i === 3 ? ' três' : i === 4 ? ' quatro' : i === 5 ? ' cinco' : i === 6 ? ' seis' : i === 7 ? ' sete' : i === 8 ? ' oito' : i === 9 ? ' nove' : ' dez');
+        lista.appendChild(item);
+     }
+     sectionRigth.appendChild(lista);
+
+     //9
+     for (let i=1; i<=3; i +=1){
+        const h3 = document.createElement('h3');
+        mainPai.appendChild(h3);
+        h3.className = 'description';
+     }
+
+     //
+     mainPai.removeChild(sectionLeft);
+
+     sectionRigth.style = 'margin-right:auto';
+     mainPai.style.backgroundColor= 'green';
+
+     const item = document.querySelectorAll('li');
+     lista.removeChild(item[8]);
+     lista.removeChild(item[9]);
+    </script>
+  </body>
+</html>

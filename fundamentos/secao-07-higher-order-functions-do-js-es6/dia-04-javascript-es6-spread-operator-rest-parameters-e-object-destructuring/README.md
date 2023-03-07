@@ -1,0 +1,1 @@
+Exercicios spread operator, rest parameters e object destructuring
